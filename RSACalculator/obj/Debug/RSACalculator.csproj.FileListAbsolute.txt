@@ -1,0 +1,10 @@
+C:\Users\Fadhli\source\repos\RSACalculator\RSACalculator\bin\Debug\RSACalculator.exe.config
+C:\Users\Fadhli\source\repos\RSACalculator\RSACalculator\bin\Debug\RSACalculator.exe
+C:\Users\Fadhli\source\repos\RSACalculator\RSACalculator\bin\Debug\RSACalculator.pdb
+C:\Users\Fadhli\source\repos\RSACalculator\RSACalculator\obj\Debug\RSACalculator.csprojResolveAssemblyReference.cache
+C:\Users\Fadhli\source\repos\RSACalculator\RSACalculator\obj\Debug\RSACalculator.Form1.resources
+C:\Users\Fadhli\source\repos\RSACalculator\RSACalculator\obj\Debug\RSACalculator.Properties.Resources.resources
+C:\Users\Fadhli\source\repos\RSACalculator\RSACalculator\obj\Debug\RSACalculator.csproj.GenerateResource.cache
+C:\Users\Fadhli\source\repos\RSACalculator\RSACalculator\obj\Debug\RSACalculator.csproj.CoreCompileInputs.cache
+C:\Users\Fadhli\source\repos\RSACalculator\RSACalculator\obj\Debug\RSACalculator.exe
+C:\Users\Fadhli\source\repos\RSACalculator\RSACalculator\obj\Debug\RSACalculator.pdb
