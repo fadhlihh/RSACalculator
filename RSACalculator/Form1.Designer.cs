@@ -124,6 +124,7 @@
             this.button1.TabIndex = 24;
             this.button1.Text = "Enkripsi";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label13
             // 
@@ -204,7 +205,7 @@
             // 
             this.numericUpDown4.Location = new System.Drawing.Point(548, 133);
             this.numericUpDown4.Minimum = new decimal(new int[] {
-            1,
+            2,
             0,
             0,
             0});
@@ -212,7 +213,7 @@
             this.numericUpDown4.Size = new System.Drawing.Size(84, 20);
             this.numericUpDown4.TabIndex = 14;
             this.numericUpDown4.Value = new decimal(new int[] {
-            1,
+            17,
             0,
             0,
             0});
@@ -250,6 +251,11 @@
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(84, 20);
             this.numericUpDown2.TabIndex = 10;
+            this.numericUpDown2.Value = new decimal(new int[] {
+            11,
+            0,
+            0,
+            0});
             this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
             // 
             // label5
@@ -267,6 +273,11 @@
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(84, 20);
             this.numericUpDown1.TabIndex = 8;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            16,
+            0,
+            0,
+            0});
             this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // label4

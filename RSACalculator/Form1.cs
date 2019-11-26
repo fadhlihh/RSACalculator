@@ -16,7 +16,7 @@ namespace RSACalculator
         {
             InitializeComponent();
             textBox4.Text = "1";
-            textBox2.Text = "0";
+            textBox2.Text = "1";
         }
 
         private bool isRelatifPrima(int n, int m)
@@ -101,6 +101,26 @@ namespace RSACalculator
                 label12.Text = "Harus relatif prima terhadap m";
                 button1.Enabled = false;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            char[] chars = textBox1.Text.ToCharArray();
+            int number = 0;
+            string text = "";
+            double temp;
+            for(int i=0; i< chars.Length; i++)
+            {
+                temp = 1;
+                number = (chars[i] % 65);
+                for(int j=1; j<=numericUpDown4.Value; j++)
+                {
+                    temp *= number;
+                }
+                string current_char = (temp % int.Parse(textBox2.Text)).ToString();
+                text += current_char + Environment.NewLine;
+            }
+            textBox3.Text = text;
         }
     }
 }

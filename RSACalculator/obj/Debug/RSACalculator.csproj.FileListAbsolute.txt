@@ -8,3 +8,13 @@ C:\Users\Fadhli\source\repos\RSACalculator\RSACalculator\obj\Debug\RSACalculator
 C:\Users\Fadhli\source\repos\RSACalculator\RSACalculator\obj\Debug\RSACalculator.csproj.CoreCompileInputs.cache
 C:\Users\Fadhli\source\repos\RSACalculator\RSACalculator\obj\Debug\RSACalculator.exe
 C:\Users\Fadhli\source\repos\RSACalculator\RSACalculator\obj\Debug\RSACalculator.pdb
+D:\VS Projects\RSA\RSACalculator\RSACalculator\bin\Debug\RSACalculator.exe.config
+D:\VS Projects\RSA\RSACalculator\RSACalculator\bin\Debug\RSACalculator.exe
+D:\VS Projects\RSA\RSACalculator\RSACalculator\bin\Debug\RSACalculator.pdb
+D:\VS Projects\RSA\RSACalculator\RSACalculator\obj\Debug\RSACalculator.csprojAssemblyReference.cache
+D:\VS Projects\RSA\RSACalculator\RSACalculator\obj\Debug\RSACalculator.Form1.resources
+D:\VS Projects\RSA\RSACalculator\RSACalculator\obj\Debug\RSACalculator.Properties.Resources.resources
+D:\VS Projects\RSA\RSACalculator\RSACalculator\obj\Debug\RSACalculator.csproj.GenerateResource.cache
+D:\VS Projects\RSA\RSACalculator\RSACalculator\obj\Debug\RSACalculator.csproj.CoreCompileInputs.cache
+D:\VS Projects\RSA\RSACalculator\RSACalculator\obj\Debug\RSACalculator.exe
+D:\VS Projects\RSA\RSACalculator\RSACalculator\obj\Debug\RSACalculator.pdb
