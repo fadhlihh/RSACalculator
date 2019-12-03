@@ -106,21 +106,39 @@ namespace RSACalculator
         private void button1_Click(object sender, EventArgs e)
         {
             char[] chars = textBox1.Text.ToCharArray();
-            int number = 0;
+            double number = 0;
             string text = "";
-            double temp;
             for(int i=0; i< chars.Length; i++)
             {
-                temp = 1;
-                number = (chars[i] % 65);
-                for(int j=1; j<=numericUpDown4.Value; j++)
-                {
-                    temp *= number;
-                }
-                string current_char = (temp % int.Parse(textBox2.Text)).ToString();
-                text += current_char + Environment.NewLine;
+                number = chars[i];
+                number -= 32;
+                number = Math.Pow(number,int.Parse(numericUpDown4.Value.ToString()));
+                number %= int.Parse(textBox2.Text);
+                number += 32;
+                //char current_char = (char) Convert.ToInt32(number);
+                int current_char = Convert.ToInt32(number);
+                text += current_char.ToString();
             }
             textBox3.Text = text;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            char[] chars = textBox12.Text.ToCharArray();
+            double number = 0;
+            string text = "";
+            for (int i = 0; i < chars.Length; i++)
+            {
+                number = chars[i];
+                number -= 32;
+                number = Math.Pow(number, int.Parse(numericUpDown3.Value.ToString()));
+                number %= int.Parse(numericUpDown5.Value.ToString());
+                number += 32;
+                //char current_char = (char)Convert.ToInt32(number);
+                int current_char = Convert.ToInt32(number);
+                text += current_char.ToString();
+            }
+            textBox11.Text = text;
         }
     }
 }
