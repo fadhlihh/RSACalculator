@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Numerics;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace RSACalculator
 {
     public partial class Form1 : Form
@@ -106,37 +106,42 @@ namespace RSACalculator
         private void button1_Click(object sender, EventArgs e)
         {
             char[] chars = textBox1.Text.ToCharArray();
-            double number = 0;
+            BigInteger number = 0;
             string text = "";
             for(int i=0; i< chars.Length; i++)
             {
                 number = chars[i];
-                number -= 32;
-                number = Math.Pow(number,int.Parse(numericUpDown4.Value.ToString()));
-                number %= int.Parse(textBox2.Text);
-                number += 32;
-                //char current_char = (char) Convert.ToInt32(number);
-                int current_char = Convert.ToInt32(number);
-                text += current_char.ToString();
+                number = number - 65;
+                BigInteger exponent = BigInteger.Parse(numericUpDown4.Value.ToString());
+                BigInteger divisor = BigInteger.Parse(textBox2.Text);
+                number = BigInteger.ModPow(number, exponent, divisor);
+                //int current_char = Convert.ToInt32(number);
+                text += number.ToString();
+                if (i != chars.Length - 1)
+                    text += ",";
             }
             textBox3.Text = text;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            char[] chars = textBox12.Text.ToCharArray();
-            double number = 0;
+            int count = 100000000;
+            String chars = textBox12.Text;
+            String[] spearator = { "," };
+            String[] strlist = chars.Split(spearator, count, StringSplitOptions.RemoveEmptyEntries);
             string text = "";
-            for (int i = 0; i < chars.Length; i++)
+            BigInteger number = 0;
+            //char[] chars = textBox12.Text.ToCharArray();
+            foreach (String s in strlist)
             {
-                number = chars[i];
-                number -= 32;
-                number = Math.Pow(number, int.Parse(numericUpDown3.Value.ToString()));
-                number %= int.Parse(numericUpDown5.Value.ToString());
-                number += 32;
-                //char current_char = (char)Convert.ToInt32(number);
-                int current_char = Convert.ToInt32(number);
-                text += current_char.ToString();
+                number = System.Convert.ToInt32(s);
+                BigInteger divisor = BigInteger.Parse(numericUpDown5.Value.ToString());
+                BigInteger exponent = BigInteger.Parse(numericUpDown3.Value.ToString());
+                number = BigInteger.ModPow(number, exponent, divisor);
+                number = number + 65;
+                int numInt = (int)number;
+                char text_string = Convert.ToChar(numInt);
+                text += text_string;
             }
             textBox11.Text = text;
         }
