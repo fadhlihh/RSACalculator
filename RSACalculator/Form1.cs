@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Reflection;
 namespace RSACalculator
 {
     public partial class Form1 : Form
@@ -15,8 +17,8 @@ namespace RSACalculator
         public Form1()
         {
             InitializeComponent();
-            textBox4.Text = "1";
-            textBox2.Text = "1";
+            textBox4.Text = "150";
+            textBox2.Text = "176";
         }
 
         private bool isRelatifPrima(int n, int m)
@@ -121,6 +123,7 @@ namespace RSACalculator
                     text += ",";
             }
             textBox3.Text = text;
+            button4.Enabled = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -144,6 +147,59 @@ namespace RSACalculator
                 text += text_string;
             }
             textBox11.Text = text;
+            button6.Enabled = true;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Text File (*.txt)|*.txt|Word Document File (*.doc)|*.doc|Word Document File (*.docx)|*.docx";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                textBox7.Text = dialog.FileName;
+                StreamReader reader = new StreamReader(textBox7.Text);
+                textBox1.Text = reader.ReadToEnd();
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.Filter = "Text File (*.txt)|*.txt|Word Document File (*.doc)|*.doc|Word Document File (*.docx)|*.docx";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                using (Stream stream = File.Open(dialog.FileName, FileMode.CreateNew))
+                using (StreamWriter writer = new StreamWriter(stream))
+                {
+                    writer.Write(textBox3.Text);
+                }
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Text File (*.txt)|*.txt|Word Document File (*.doc)|*.doc|Word Document File (*.docx)|*.docx";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                textBox8.Text = dialog.FileName;
+                StreamReader reader = new StreamReader(textBox8.Text);
+                textBox12.Text = reader.ReadToEnd();
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.Filter = "Text File (*.txt)|*.txt|Word Document File (*.doc)|*.doc|Word Document File (*.docx)|*.docx";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                using (Stream stream = File.Open(dialog.FileName, FileMode.CreateNew))
+                using (StreamWriter writer = new StreamWriter(stream))
+                {
+                    writer.Write(textBox11.Text);
+                }
+            }
         }
     }
 }
